@@ -101,8 +101,4 @@ body {
   body{
     overflow: scroll;
   }
-  .wrapper{
-    grid-template-columns: 1fr;
-  
-  }
 }
