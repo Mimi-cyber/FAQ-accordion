@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    font-size: var(--font-size);
+}
+:root {
+    --veryDarkBlue: hsl(238, 29%, 16%);
+    --softRed: hsl(14, 88%, 65%);
+    --softViolet: hsl(273, 75%, 66%);
+    --softBlue: hsl(240, 73%, 65%);
+    --veryDarkGrayBlue: hsl(237, 12%, 33%);
+    --darkGrayBlue: hsl(240, 6%, 50%);
+    --lightGrayBlue: hsl(240, 5%, 91%);
+    --font-size:12px;
+}
+body {
+   font-family: 'Kumbh Sans', sans-serif;
+   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+   margin: 0;
+   height: 100vh;
+   width: 100vw;
+   justify-content: center;
+   align-content: center;  
+   overflow: hidden;
+}
+.container {
+   background: white;
+   border-radius: 30px;
+   height: 80%;
+   width: 70%;
+   max-width: 960px;
+   margin: 5% auto;
+   background-image: url(images/bg-pattern-desktop.svg);
+   background-repeat: no-repeat;
+   background-position: -100% center;
+   background-size: 70% 135%;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+}
+.image-div {
+  position: relative;
+}
+.box {
+  position: absolute;
+  top: 45%;
+  left:-20%;
+}
+.woman-img-wrapper, .image-div, .image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.woman-img-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.woman{
+  position: absolute;
+  width: 95%;
+  left:-10%;
+  top: 15%;
+}
+.answer {
+   display: none;
+}
+.accordion {
+   margin-top: 40px;
+   display: flex;
+   flex-direction: column;
+}
+.accordion-questions {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.question-answer {
+   width: 360px;
+   border-bottom: 1px solid var(--lightGrayBlue);
+}
+.accordion-title {
+   font-size: 35px;
+}
+.question-title {
+   font-size: 15px;
+   font-weight: 500;
+   margin: 1.5rem 0;
+   color: var(--darkGrayBlue);
+}
+.question {
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
+}
+.question img {
+   align-self: center;
+}
+@media screen and (max-width: 768px){
+  body{
+    overflow: scroll;
+  }
+  .wrapper{
+    grid-template-columns: 1fr;
+  
+  }
+}
